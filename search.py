@@ -1,16 +1,12 @@
-
 ### 検索ツールサンプル
 ### これをベースに課題の内容を追記してください
 import csv
 import pprint
 # 検索ソース
-# source = ["ねずこ","たんじろう","きょうじゅろう","ぎゆう","げんや","かなお","ぜんいつ"]
-with open('source.csv') as f:
-    # print(f.read())
+with open('source.csv', newline='') as f:
     char_name = csv.reader(f)
     for i in char_name:
         source = i
-    print(source)
 
 ### 検索ツール
 def search():
