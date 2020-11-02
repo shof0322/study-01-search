@@ -14,13 +14,16 @@ def search():
     
     ### ここに検索ロジックを書く
     for i in range(len(source)):
-        if source[i] == word:
+        if word in source:
             return print("{}が見つかりました".format(word))
-    print("{}は見つかりませんでした".format(word))
-    add_list_flag = input("新しく追加しますか？Y/N >>> ")
-    if add_list_flag == "Y":
-        source.append(word)
-        print(source)
+        else:
+            print("{}は見つかりませんでした".format(word))
+            add_list_flag = input("新しく追加しますか？Y/N >>> ")
+            if add_list_flag == "Y":
+                source.append(word)
+                return print(source)
+            else:
+                return print(source)
 
 if __name__ == "__main__":
     search()
